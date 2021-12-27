@@ -4,6 +4,10 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,6 +34,10 @@ public class Utils extends BrowserManager{
         }
     }
 
+    public static void clickOnBtn(String btnText){
+//        clickOnElement(By.xpath("//[contains()," +btnText+ ]"));
+    }
+
     public static void clickOnMenuItem(String category){
         clickOnElement(By.linkText(category));
     }
@@ -53,5 +61,20 @@ public class Utils extends BrowserManager{
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyhhmmss");
         return sdf.format(date);
+    }
+
+    public static WebElement getElement(By by){
+        return driver.findElement(by);
+    }
+
+    public static void selectWithVisibleText(By by,String visibleText){
+        Select select = new Select(driver.findElement(by));
+        select.selectByVisibleText(visibleText);
+    }
+
+    public static void waitForVisible(By by, long timeInSeconds){
+//        WebDriverWait wait = new WebDriverWait(driver, timeInSeconds);
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+//        wait.until(ExpectedConditions.elementToBeClickable(by));
     }
 }
