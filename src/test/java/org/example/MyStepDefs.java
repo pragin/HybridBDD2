@@ -240,4 +240,17 @@ public class MyStepDefs {
     public void userConfirmsOrder() {
         checkOutPage.confirmOrder();
     }
+
+
+    @When("user clicks on vote button")
+    public void user_clicks_on_vote_button() {
+        homepage.clickOnVoteBtn();
+    }
+    @Then("an alert should pop asking to choose an option")
+    public void an_alert_should_pop_asking_to_choose_an_option() {
+        homepage.handleAlertBox();
+    }
+
+
+
 }
