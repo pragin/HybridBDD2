@@ -252,5 +252,7 @@ public class MyStepDefs {
     }
 
 
-
+    @And("user clicks on submenu")
+    public void userClicksOnSubmenu() {
+    }
 }
