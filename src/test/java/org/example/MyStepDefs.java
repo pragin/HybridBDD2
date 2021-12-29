@@ -116,7 +116,7 @@ public class MyStepDefs {
 
     @Given("User is on homepage")
     public void user_is_on_homepage() {
-
+        homepage.clickOnLogo();
     }
 
     @When("user clicks on  category {string} in main menu")

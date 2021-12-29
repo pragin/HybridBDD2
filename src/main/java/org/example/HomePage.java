@@ -4,13 +4,19 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 
 public class HomePage extends Utils {
-
+    //Logo xpath. used to take the user to homepage
+    By _logoHomepage = By.xpath("//div[@class=\"header-logo\"]");
+//    used for user registration
      By _registerLink = By.linkText("Register");
      By _computersMenu = By.xpath("//div[@class=\"header-menu\"]/ul[1]/li[1]/a[@href=\"/computers\"]");
      By _detailsButton = By.xpath("//div[@class=\"buttons\"]/a[@href=\"/nopcommerce-new-release\"]");
      By _voteBtn = By.id("vote-poll-1");
      By _pollAnswerExcellentRadio = By.id("pollanswers-1");
      By _votingError = By.id("block-poll-vote-error-1");
+
+     public void clickOnLogo(){
+         clickOnElement(_logoHomepage);
+     }
 
     public void clickOnRegisterLink(){
         clickOnElement(_registerLink);
