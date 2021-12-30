@@ -159,8 +159,8 @@ public class MyStepDefs {
     }
 
     @And("user clicks on submenu {string}")
-    public void userClicksOnSubmenu(String subMenu) {
-        categoryUrl.clickOnSubMenu(subMenu);
+    public void userClicksOnSubmenu(String subCategory) {
+        categoryUrl.clickOnSubMenu(subCategory);
     }
 
     @When("user select the relevant configuration")

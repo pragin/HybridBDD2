@@ -1,7 +1,7 @@
 Feature: Comment on new release
 
   User should be able to post a comment successfully
-  @test
+
   Scenario: user should be able to post a comment
     When user click on details button
     And user fills comments form
